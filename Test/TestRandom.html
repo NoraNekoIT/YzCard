@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Random Questions</title>
+</head>
+<body>
+    <p id="message"> <text id="quiz"></text>...</p>
+    <p id="button"></p>
+
+    <script>
+        var arrayquiz = [
+        "What is the funniest dream that you have ever had?", 
+        "What is your favorite game ?", 
+        "What is the most childish thing you still do?", 
+        "What do you do to fill the holidays?",
+        "If you had to relationship one person in this room ,who would that be?",
+        "What would you do if you were the opposite gender for a one day ?",
+        "Who was your favorite lecturer and why ?",
+        "What is your favorite sport ?",
+        "What is the capital of the state that you live in?",
+        "Can you touch your nose with your tongue ?",
+        "What do you see the first time you meet someone (woman or man)?",
+        "Always hanging but never falling, who am I?"
+    
+    ];
+       
+        var random001 = Math.floor(Math.random() * arrayquiz.length);
+        document.getElementById("button").innerHTML = "<button onclick=btn001()>Other</button>";
+      
+
+        document.getElementById("quiz").innerHTML = arrayquiz[random001];
+
+        function btn001() {
+            random001 = Math.floor(Math.random() * arrayquiz.length);
+            document.getElementById("quiz").innerHTML = arrayquiz[random001];
+        
+        }
+    </script>
+</body>
+</html>
